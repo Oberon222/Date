@@ -1,2 +1,9 @@
-﻿  Source.cpp
-  Overload operators Date.vcxproj -> C:\Users\pavel\source\repos\Overload operators Date\Debug\Overload operators Date.exe
+﻿  Date.cpp
+C:\Users\pavel\source\repos\Overload operators Date\Overload operators Date\Date.cpp(201,15): error C2082: redefinition of formal parameter 'fout'
+C:\Users\pavel\source\repos\Overload operators Date\Overload operators Date\Date.cpp(216,14): error C2082: redefinition of formal parameter 'fin'
+C:\Users\pavel\source\repos\Overload operators Date\Overload operators Date\Date.cpp(230,15): warning C4552: '+': result of expression not used
+C:\Users\pavel\source\repos\Overload operators Date\Overload operators Date\Date.cpp(234,17): warning C4552: '+': result of expression not used
+C:\Users\pavel\source\repos\Overload operators Date\Overload operators Date\Date.cpp(239,15): warning C4552: '+': result of expression not used
+C:\Users\pavel\source\repos\Overload operators Date\Overload operators Date\Date.cpp(248,14): warning C4552: '-': result of expression not used
+C:\Users\pavel\source\repos\Overload operators Date\Overload operators Date\Date.cpp(251,17): warning C4552: '-': result of expression not used
+C:\Users\pavel\source\repos\Overload operators Date\Overload operators Date\Date.cpp(256,15): warning C4552: '-': result of expression not used

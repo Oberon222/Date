@@ -173,7 +173,7 @@ Date Date::operator()(int numbDays, int numbMonths, int numbYears) // додає певн
 		this->month=1;
 		this->yar++;
 	}
-	return Date();
+	return *this;
 }
 
 bool operator!=(const Date& p1, const Date& p2)
@@ -196,35 +196,33 @@ bool operator<(const Date& p1, const Date& p2)
 	return (p1.yar < p2.yar || p1.month < p2.month || p1.day < p2.day);
 }
 
-//ofstream& operator<<(ofstream& fout, const Date& p1)
-//{
-//	ofstream fout;
-//	fout.open("Date.txt");
-//	bool isOpen = fout.is_open();
-//	if (!isOpen) {
-//		cout << "Error" << endl;
-//	}
-//
-//	fout << p1.day << endl;
-//	fout << p1.month << endl;
-//	fout << p1.yar << endl;
-//
-//	return fout;
-//}
+ofstream& operator<<(ofstream& fout, const Date& p1)
+{
+	ofstream fout;
+	bool isOpen = fout.is_open();
+	if (!isOpen) {
+		cout << "Error" << endl;
+	}
 
-//ofstream& operator>>(ifstream& fin, Date& p1)
-//{
-//	ifstream fin;
-//	fin.open("Date.txt");
-//	if (!fin.is_open()) {
-//		cout << "Error" << endl;
-//	}
-//
-//	fin >> p1.day;
-//	fin >> p1.month;
-//	fin >> p1.yar;
-//	return fin;
-//}
+	fout << p1.day << endl;
+	fout << p1.month << endl;
+	fout << p1.yar << endl;
+
+	return fout;
+}
+
+ifstream& operator>>(ifstream& fin, Date& p1)
+{
+	ifstream fin;
+	if (!fin.is_open()) {
+		cout << "Error" << endl;
+	}
+
+	fin >> p1.day;
+	fin >> p1.month;
+	fin >> p1.yar;
+	return fin;
+}
 
 Date operator++(Date& p1)
 {
@@ -259,5 +257,5 @@ Date operator--(Date& p1)
 		p1.SetMonth(p1.GetMonth()-1);
 		p1.SetDay(p1.GetDaysInMonth());
 	}
-	return Date();
+	return p1;
 }

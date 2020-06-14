@@ -5,9 +5,9 @@
 using namespace std;
 
 int main() {
-	Date d1(13, DECEMBER, 1982);
+	Date d1(13, DECEMBER,1982);
 	d1.Print();
-	d1.operator()(2,12,3);
+	d1.operator()(2,3);
 	d1.Print();
 
 

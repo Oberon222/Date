@@ -72,7 +72,7 @@ public:
 
 
 	friend ofstream& operator<<(ofstream& fout, const Date& p1);
-	friend ofstream& operator>>(ifstream& fin, Date& p1);
+	friend ifstream& operator>>(ifstream& fin, Date& p1);
 };
 
 	Date operator++(Date& p1);
